@@ -17,6 +17,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileLoginLabel: UILabel?
     @IBOutlet weak var profileCollectionView: UICollectionView?
     
+    @IBOutlet weak var interConstraint: NSLayoutConstraint?
+    @IBOutlet weak var interConstraint2: NSLayoutConstraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +50,13 @@ class ProfileViewController: UIViewController {
         profileCollectionView?.dataSource = self
         
         profileCollectionView?.register(UINib(nibName: "DataCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DataCollectionViewCell")    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if view.frame.size.height < 700 {
+            interConstraint?.constant = 30
+            interConstraint2?.constant = 30
+        }
     }
     
     @objc func tapAvatar() {

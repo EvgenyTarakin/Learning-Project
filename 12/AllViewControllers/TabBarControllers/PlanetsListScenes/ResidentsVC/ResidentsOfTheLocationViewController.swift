@@ -91,8 +91,6 @@ extension ResidentsOfTheLocationViewController: UICollectionViewDataSource {
         
         cell.speciesLabel?.textColor = UIColor("565656")
         cell.speciesLabel?.font = AppFont.regular.size(12)
-
-        print(cell.idURLString as Any)
         
         if let resident = LocalResidentsStorage.shared.dictionaryCache[currentURLString] {
             cell.nameLabel?.text = resident.name
@@ -102,8 +100,6 @@ extension ResidentsOfTheLocationViewController: UICollectionViewDataSource {
         } else {
             DispatchQueue.global().async {
                 self.networkService.getResident(stringURL: currentURLString) { [ weak self ] (response, error) in
-                    print(cell.idURLString as Any)
-                    print(currentURLString)
                     if let idURLString = cell.idURLString,
                        idURLString == currentURLString {
                         DispatchQueue.main.async {

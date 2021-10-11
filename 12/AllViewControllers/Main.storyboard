@@ -343,8 +343,11 @@
                                 <buttonConfiguration key="configuration" style="plain"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Eq-nko">
-                                <rect key="frame" x="0.0" y="420" width="414" height="214"/>
+                                <rect key="frame" x="0.0" y="420" width="414" height="116"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="8ro-eI-ga0"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4Oi-Pf-sDy">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -390,7 +393,6 @@
                             <constraint firstItem="YaG-bF-Siw" firstAttribute="centerX" secondItem="eqk-GH-ZNE" secondAttribute="centerX" id="ZRn-Hm-hmw"/>
                             <constraint firstItem="67o-Tx-XI7" firstAttribute="trailing" secondItem="cFb-xY-cAh" secondAttribute="trailing" id="cgF-ri-R3V"/>
                             <constraint firstItem="pc4-wP-57q" firstAttribute="top" secondItem="eqk-GH-ZNE" secondAttribute="top" id="geS-5k-erx"/>
-                            <constraint firstItem="Oc0-uw-jUd" firstAttribute="top" secondItem="08h-Eq-nko" secondAttribute="bottom" constant="100" id="hp8-m9-73M"/>
                             <constraint firstItem="cFb-xY-cAh" firstAttribute="leading" secondItem="67o-Tx-XI7" secondAttribute="leading" id="iyC-qN-ztb"/>
                             <constraint firstItem="YaG-bF-Siw" firstAttribute="top" secondItem="eqk-GH-ZNE" secondAttribute="top" constant="117" id="koW-fL-OPj"/>
                             <constraint firstItem="67o-Tx-XI7" firstAttribute="trailing" secondItem="pc4-wP-57q" secondAttribute="trailing" id="mlL-Gg-bTK"/>
@@ -408,6 +410,8 @@
                     <connections>
                         <outlet property="avatarImageView" destination="YaG-bF-Siw" id="pkf-d5-X3q"/>
                         <outlet property="changeAvatarButton" destination="QMJ-tN-h8u" id="eVV-vK-edo"/>
+                        <outlet property="interConstraint" destination="9LZ-Uq-fFD" id="cE5-R8-wc0"/>
+                        <outlet property="interConstraint2" destination="oq2-C2-kU9" id="Zq1-fS-3Ir"/>
                         <outlet property="profileBackColorView" destination="pc4-wP-57q" id="unW-Zl-ojm"/>
                         <outlet property="profileBackImageView" destination="cFb-xY-cAh" id="05a-wb-S2P"/>
                         <outlet property="profileCollectionView" destination="08h-Eq-nko" id="ZfB-dW-QFg"/>
