@@ -144,10 +144,12 @@
                         <outlet property="authorizationLabel" destination="BQA-fF-GTe" id="Upt-pO-zP7"/>
                         <outlet property="entryButton" destination="BdP-pA-1PE" id="ZtU-JK-5ZB"/>
                         <outlet property="instructionLabel" destination="rzP-b2-4Lk" id="z7f-mc-F3X"/>
+                        <outlet property="interConstraint" destination="mWL-a2-IQx" id="dZX-Lf-IWp"/>
                         <outlet property="labelError" destination="pCj-7V-8Xr" id="gM0-j0-Oos"/>
                         <outlet property="loginTextField" destination="2bw-MG-EyN" id="3Us-SG-48F"/>
                         <outlet property="passwordTextField" destination="nLD-ue-f2a" id="TDZ-S5-NnO"/>
                         <outlet property="registrationButton" destination="kqq-Xj-iiN" id="ekK-09-aIR"/>
+                        <outlet property="topConstraint" destination="wRm-R8-6AF" id="84Y-RH-yL7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,9 +164,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A51-P8-7CQ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A51-P8-7CQ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xt3-fP-fbq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
@@ -274,16 +275,21 @@
                         <viewLayoutGuide key="safeArea" id="Cxe-YR-7Rd"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="A51-P8-7CQ" firstAttribute="trailing" secondItem="Cxe-YR-7Rd" secondAttribute="trailing" id="6SP-hR-iW8"/>
                             <constraint firstItem="Kp9-ar-pMe" firstAttribute="top" secondItem="Xt3-fP-fbq" secondAttribute="top" constant="181" id="BBz-RM-S2V"/>
+                            <constraint firstItem="A51-P8-7CQ" firstAttribute="top" secondItem="Cxe-YR-7Rd" secondAttribute="top" id="LtI-5B-mrc"/>
                             <constraint firstItem="TaZ-Rl-zwJ" firstAttribute="trailing" secondItem="Cxe-YR-7Rd" secondAttribute="trailing" id="XQx-gG-fsU"/>
                             <constraint firstAttribute="bottom" secondItem="TaZ-Rl-zwJ" secondAttribute="bottom" constant="38" id="dKu-2h-ujC"/>
+                            <constraint firstItem="A51-P8-7CQ" firstAttribute="bottom" secondItem="Cxe-YR-7Rd" secondAttribute="bottom" id="e0F-UT-R8W"/>
                             <constraint firstItem="TaZ-Rl-zwJ" firstAttribute="leading" secondItem="Cxe-YR-7Rd" secondAttribute="leading" id="e8r-Ep-kDU"/>
+                            <constraint firstItem="A51-P8-7CQ" firstAttribute="leading" secondItem="Cxe-YR-7Rd" secondAttribute="leading" id="qsf-L6-CjU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="labelError" destination="4QM-Bz-miD" id="2TD-uy-aeK"/>
                         <outlet property="registrationButton" destination="TaZ-Rl-zwJ" id="2lV-0v-lP7"/>
                         <outlet property="registrationScrollView" destination="A51-P8-7CQ" id="N3k-G6-A4E"/>
+                        <outlet property="topConstraint" destination="BBz-RM-S2V" id="PDB-9Q-XHE"/>
                         <outletCollection property="collectionRegistrationTextFieldsOutlets" destination="D5T-Nd-Mcx" collectionClass="NSMutableArray" id="azo-52-3t4"/>
                         <outletCollection property="collectionRegistrationTextFieldsOutlets" destination="3LN-gP-2BW" collectionClass="NSMutableArray" id="H8M-1Q-rAK"/>
                         <outletCollection property="collectionRegistrationTextFieldsOutlets" destination="mz7-TM-dc9" collectionClass="NSMutableArray" id="l7r-Xt-VEV"/>
